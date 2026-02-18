@@ -1,5 +1,3 @@
-//ubicado en /home/gonmpr/.local/share/rofi/themes
-
 *{
     hv:#d19a66;
     bg:#282c34;
@@ -9,13 +7,18 @@
     background-color: @bg;
     dark: @bg;
     border: 0px;
+
+    font: "JetBrainsMono Nerd Font 13";
+
 }
 
 window{
 
-    width: 440;
-    location: center;
-    ancor: center;
+
+    width: 400;
+    y-offset: 5;
+    location: north;
+    anchor: north;
     spacing: 0;
     children: [mainbox];
     horientation: horizontal;
@@ -36,8 +39,9 @@ inputbar{
     color: #fff;
     padding: 3px;
     margin: 3px;
-    border: 0px 0px 1px 0px;
+    border: 0px 0px 0px 0px;
     border-color: @ug;
+
 }
 
 entry, prompt, case-indicator{
@@ -52,7 +56,10 @@ prompt{
 
 
 listview{
-    lines:5;
+    dynamic: true;   
+    lines: 10;       
+    require-input: true;     
+    fixed-height: false; 
 }
 
 element{
@@ -84,3 +91,4 @@ element selected active{
     background: @hv;
     forground: @bg;
 }
+
