@@ -1,0 +1,86 @@
+//ubicado en /home/gonmpr/.local/share/rofi/themes
+
+*{
+    hv:#d19a66;
+    bg:#282c34;
+    txt:#abb2bf;
+    ug:#344955;
+
+    background-color: @bg;
+    dark: @bg;
+    border: 0px;
+}
+
+window{
+
+    width: 440;
+    location: center;
+    ancor: center;
+    spacing: 0;
+    children: [mainbox];
+    horientation: horizontal;
+    border: 1px;
+    border-radius: 1px;
+    border-color: @ug;
+}
+
+mainbox{
+    children: [inputbar, message, listview ];
+}
+
+message{
+    padding: 5px;
+}
+
+inputbar{
+    color: #fff;
+    padding: 3px;
+    margin: 3px;
+    border: 0px 0px 1px 0px;
+    border-color: @ug;
+}
+
+entry, prompt, case-indicator{
+
+    text-font: inherit;
+    text-color: inherit;
+}
+
+prompt{
+    enabled: false;
+}
+
+
+listview{
+    lines:5;
+}
+
+element{
+    padding:3px;
+    vertical-align: 0.5;
+    color: @txt;
+    font: inherit;
+}
+
+element-text{
+    background-color: inherit;
+    text-color: inherit;
+    
+}
+
+element selected.normal{
+    background-color: @hv;
+    color: @bg;
+}
+
+element normal active{
+    background-color: @hv;
+}
+element normal urgent{
+    background-color: @txt;
+}
+
+element selected active{
+    background: @hv;
+    forground: @bg;
+}
