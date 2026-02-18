@@ -1,5 +1,3 @@
-# Dotfiles
-
 ## Programs
 
 ### Core System
