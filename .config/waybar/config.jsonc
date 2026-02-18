@@ -1,0 +1,116 @@
+{
+  "position": "top",
+  "margin-top": 0,
+  "modules-left": ["clock", "hyprland/workspaces"],
+  "modules-center": ["tray"],
+  "modules-right": [
+    "temperature",
+    "pulseaudio",
+    "network",
+    "bluetooth",
+    "battery",
+    "custom/power"
+  ],
+   "temperature": {
+      "critical-threshold": 80,
+      "format-critical": "!{temperatureC}°C",
+      "format": "{temperatureC}°C"
+  },
+
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "max-length": 25,
+    "tooltip": true,
+    "tooltip-format": "{:%d %b}"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "persistent-workspaces":{
+      "*": 5
+    }
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+    },
+
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}% ",
+    "format-muted": " M",
+    "format-icons": {
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+
+  "network": {
+      "interface": "wlan0",
+      "format-wifi": "{icon} {ipaddr}",
+      "format-ethernet": "{ipaddr}",
+      "format-disconnected": "", //An empty format will hide the module.
+      "format-icons":[""],
+      "tooltip-format": "{essid} ({signalStrength}%)",
+      "max-length": 50,
+      "on-click": "kitty --class nmtui-float -e nmtui-connect"
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": " off", // an empty format will hide the module
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+  },
+
+  "battery": {
+      "interval": 60,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{icon} {capacity}%",
+      "format-charging": " {capacity}%",
+
+      "format-icons": ["", "", "", "", ""],
+      "max-length": 25,
+      "on-update": "bash -c 'lvl=$(cat /sys/class/power_supply/BAT0/capacity); flag=/tmp/waybar_battery_warn; if [ \"$lvl\" -le 15 ]; then if [ ! -f $flag ]; then notify-send \"Batería baja\" \"Nivel: ${lvl}%\"; touch $flag; fi; else rm -f $flag; fi'"
+  },
+
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "custom/power": {
+      "format": "⏻",
+      "on-click": "~/.config/hypr/scripts/power-rofi/power.sh",
+      "tooltip": false
+  }
+
+}
