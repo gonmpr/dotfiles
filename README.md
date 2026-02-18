@@ -1,0 +1,4 @@
+# Dotfiles
+
+## Programas
+- Terminal: ```Kitty```
