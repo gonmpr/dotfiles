@@ -8,10 +8,10 @@
 - **Window Manager:** ```hyprland```
 - **Idle Daemon:** ```hypridle```
 - **Screen Locker:** ```hyprlock```
-
-### Interface
 - **Terminal:** ```kitty```
 - **Shell:** ```bash```
+
+### Interface
 - **Status Bar:** ```waybar```
 - **Notification Daemon:** ```swaync```
 - **Application Launcher:** ```rofi```
