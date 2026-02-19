@@ -1,357 +1,74 @@
 
 @import url("colors/theme.css");
 
-:root {
-  --red: @orange;
-  --maroon: @red;
-  --pink: @red;
-  --flamingo: @orange;
-  --peach: @orange;
-  --yellow: @yellow;
-  --sky: @aqua;
-  --sapphire: @blue;
-  --blue: @blue;
-
-  --text: @fg;
-  --subtext0: @grey1;
-  --subtext1: @grey2;
-
-  --surface1: @bg2;
-  --surface2: @bg3;
-  --base: @bg1;
-  --mantle: @bg0;
-
-  --bg-primary: @bg0;
-  --bg-secondary: @bg1;
-
-  --accent: @orange;
-  --accent-hover: @yellow;
-  --accent-active: @orange;
-
-  --summary: @fg;
-  --title: @fg;
-  --body: @grey1;
-  --time: @grey1;
-  --dnd: @grey1;
-
-  --low: @green;
-  --normal: @orange;
-  --critical: @red;
-}
-
 * {
   all: unset;
   font-size: 14px;
-  font-family: "FiraSans Nerd Font";
-  transition: 100ms;
+  font-family: "GeistMono Nerd Font";
 }
-
-/* notifications */
 
 .floating-notifications > scrolledwindow,
 .control-center {
-  border-radius: 0px 0px 0px 12px;
-  color: var(--text);
-  margin: 0px 0px;
-  background-color: var(--bg-primary);
+  background-color: @bg0;
+  color: @fg;
+  border-radius: 12px 12px 12px 12px;
 }
 
-.floating-notifications > scrolledwindow > widget > *:not(:last-child)  {
-  border-bottom: 1px solid var(--bg-secondary);
+.floating-notifications > scrolledwindow > widget > *:not(:last-child) {
+  border-bottom: 1px solid @bg2;
+}
+
+
+.notification .notification-content {
+  margin: 10px ;
 }
 
 .notification.low {
-  border-right: 5px solid var(--low);
+  border-right: 4px solid @green;
 }
 
 .notification.normal {
-  border-right: 5px solid var(--normal);
+  border-right: 4px solid @orange;
 }
 
 .notification.critical {
-  border-right: 5px solid var(--critical);
+  border-right: 4px solid @red;
 }
 
-.notification .notification-content {
-  margin: 7px;
-}
-
-.notification .notification-content overlay {
-  /* icons */
-  margin: 4px;
-}
 
 .notification-content .summary {
-  font-size: 16px;
   font-weight: bold;
-  color: var(--summary);
-}
-
-.notification.critical > * > .notification-content .summary {
-  color: var(--critical);
-}
-
-.notification-content .time {
-  color: var(--time);
-  margin-right: 40px;
+  font-size: 15px;
+  color: @fg;
 }
 
 .notification-content .body {
-  color: var(--body);
+  color: @fg;
 }
 
-.notification > *:last-child > * {
-  min-height: 3.4em;
+.notification-content .time {
+  color: @fg;
+  margin-right: 30px;
 }
 
 .close-button {
-  margin: 10px;
+  margin: 8px;
   padding: 2px;
-  border-radius: 6.3px;
-  color: var(--bg-primary);
-  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  background-color: @bg2;
+  color: @fg;
 }
 
 .close-button:hover {
-  background-color: var(--maroon);
+  background-color: @red;
+
 }
 
-.close-button:active {
-  background-color: var(--pink);
-}
-
-.notification .notification-action {
-  border-radius: 7px;
-  background-color: var(--accent);
-  color: var(--bg-primary);
-  margin: 0px 12px 6px;
-  padding: 4px;
-  font-size: 0.8rem; /* controls the button size not text size*/
-}
-
-.notification .notification-action:hover {
-  background-color: var(--accent-hover);
-}
-
-.notification .notification-action:active {
-  background-color: var(--accent-active);
-}
-
-.notification.critical progress {
-  background-color: var(--critical);
-}
-
-.notification.normal progress {
-  background-color: var(--normal);
-}
-
-.notification.low progress {
-  background-color: var(--low);
-}
-
-.notification progress,
-.notification trough,
-.notification progressbar {
-  border-radius: 12px;
-  padding: 3px 0;
-}
-
-.control-center {
-  min-height: 0;
-  padding: 6px;
-}
-
-.control-center .notification-background {
-  border-radius: 6px 0 0 6px;
-  min-height: 0;
-}
-
-.control-center .notification-background .notification.low {
-  opacity: 0.8;
-}
-
-.control-center .widget-title > label {
-  color: var(--title);
-  font-weight: bold;
-  font-size: 1.3em;
-}
-
-.control-center .widget-title button:disabled {
-  border-radius: 7px;
-  background-color: @bg3;
-  color: @grey1;
-  padding: 8px;
-}
-
-.control-center .widget-title button:not(:disabled) {
-  border-radius: 7px;
-  background-color: @orange;
-  color: @bg0;
-  padding: 8px;
-}
-
-.control-center .widget-title button:not(:disabled):hover {
-  background-color: @yellow;
-}
-
-.control-center .widget-title button:not(:disabled):active {
-  background-color: @orange;
-}
-
-.control-center .notification-group .placeholder {
-  display: none;
-}
-
-.control-center .notification-group {
-  margin-top: 20px;
-  min-height: 0;
-  padding: 10px;
-  margin: 2px ;
-}
-
-.control-center .notification-group .notification-background {
-  background-color: var(--bg-primary);
-}
-
-.control-center .notification-group:focus .notification-background {
-  background-color: var(--bg-secondary);
+.widget-title {
+    padding: 10px 10px;
 }
 
 
-scrollbar slider {
-  margin: 0px;
-  padding: 3px;
-  opacity: 0.8;
-}
-
-scrollbar trough {
-  margin: 2px 0;
-}
-
-/* dnd */
-.widget-dnd {
-  color: var(--dnd);
-  margin-top: 5px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-}
-
-.widget-dnd > switch {
-  font-size: initial;
-  border-radius: 8px;
-  background: var(--bg-secondary);
-  box-shadow: none;
-}
-
-.widget-dnd > switch:checked {
-  background: var(--accent-active);
-}
-
-.widget-dnd > switch slider {
-  background: var(--accent);
-  border-radius: 8px;
-}
-
-/* mpris */
-.widget-mpris-player {
-  background-color: var(--bg-secondary);
-  border-radius: 12.6px;
-}
-
-.mpris-overlay {
-  background-color: var(--bg-primary);
-  opacity: 0.9;
-  padding: 5px 5px;
-}
-
-.widget-mpris-album-art {
-  -gtk-icon-size: 100px;
-  border-radius: 12.6px;
-  margin: 0 5px;
-}
-
-.widget-mpris-title {
-  font-size: 1.2rem;
-  color: var(--text);
-}
-
-.widget-mpris-subtitle {
-  font-size: 1rem;
-  color: var(--text);
-}
-
-.widget-mpris button {
-  border-radius: 6px;
-  color: var(--text);
-  margin: 0 5px;
-  padding: 2px;
-}
-
-.widget-mpris button image {
-  -gtk-icon-size: 1.8rem;
-}
-
-.widget-mpris button:hover {
-  background-color: var(--bg-secondary);
-}
-
-.widget-mpris button:active {
-  background-color: var(--surface1);
-}
-
-.widget-mpris button:disabled {
-  opacity: 0.5;
-}
-
-.widget-menubar > box > .menu-button-bar > button > label {
-  font-size: 3rem;
-  padding: 0.5rem 2rem;
-}
-
-.widget-menubar > box > .menu-button-bar > :last-child {
-  color: var(--red);
-}
-
-
-.control-center .widget-label > label {
-  color: var(--text);
-  font-size: 2rem;
-}
-
-.widget-buttons-grid {
-  padding-top: 1rem;
-}
-
-.widget-buttons-grid > flowbox > flowboxchild > button label {
-  font-size: 2.5rem;
-}
-
-.widget-volume {
-  padding: 1rem 0;
-}
-
-.widget-volume label {
-  color: var(--accent);
-  padding: 0 1rem;
-}
-
-.widget-volume trough highlight {
-  background: var(--accent-hover);
-}
-
-.widget-backlight trough highlight {
-  background: var(--yellow);
-}
-
-.widget-backlight label {
-  font-size: 1.5rem;
-  color: var(--yellow);
-}
-
-.widget-backlight .KB {
-  padding-bottom: 1rem;
-}
-
-.image {
-  padding-right: 0.5rem;
+.control-center-list-placeholder {
+    opacity: 0;
 }

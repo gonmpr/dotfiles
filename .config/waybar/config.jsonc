@@ -41,10 +41,10 @@
 
 "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}% ",
+    "format-bluetooth": " {icon} {volume}%  ",
     "format-muted": " M",
     "format-icons": {
-        "default": ["", ""]
+        "default": ["","", ""]
     },
     "scroll-step": 1,
     "on-click": "pavucontrol",

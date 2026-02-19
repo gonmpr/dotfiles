@@ -8,7 +8,7 @@
     dark: @bg;
     border: 0px;
 
-    font: "JetBrainsMono Nerd Font 13";
+    font: "JetBrainsMono Nerd Font";
 
 }
 
@@ -57,7 +57,7 @@ prompt{
 
 listview{
     dynamic: true;   
-    lines: 10;       
+    lines: 8;       
     require-input: true;     
     fixed-height: false; 
 }
