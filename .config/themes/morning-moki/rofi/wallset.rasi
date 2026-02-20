@@ -6,7 +6,7 @@
 }
 
 window{
-    width: 100;
+    width: 140;
     location: northwest;
     y-offset: 5px;
     x-offset: 5px;

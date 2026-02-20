@@ -4,18 +4,17 @@
 CURRENT_THEME=$(cat "$HOME/.cache/current_theme" 2>/dev/null || echo "moki")
 BASE_DIR="$HOME/.config/themes"
 
-# Opciones del menú de power
-opciones="󰐥 Apagar\n󰜉 Reiniciar\n󰒲 Suspender\n󰍃 Cerrar sesión\n󰤄 Bloquear"
+ops="Apagar\nReiniciar\nSuspender\nSalir\nBloquear"
 
 # Ejecutar Rofi con el tema correspondiente
-echo -e "$opciones" | rofi -theme "$BASE_DIR/$CURRENT_THEME/rofi/power.rasi" \
+echo -e "$ops" | rofi -theme "$BASE_DIR/$CURRENT_THEME/rofi/power.rasi" \
                            -dmenu \
-                           -p "⏻" | while read -r opcion; do
-    case "$opcion" in
+                           -p "Power" | while read -r op; do
+    case "$op" in
         *"Apagar") systemctl poweroff ;;
         *"Reiniciar") systemctl reboot ;;
         *"Suspender") systemctl suspend ;;
-        *"Cerrar sesión") hyprctl dispatch exit ;;
+        *"Salir") hyprctl dispatch exit ;;
         *"Bloquear") hyprlock ;;
     esac
 done
