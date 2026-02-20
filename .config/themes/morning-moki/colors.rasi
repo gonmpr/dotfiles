@@ -1,0 +1,31 @@
+* {
+    /* Fondos claros (inversión de los oscuros) */
+    bg0: #f5f0eb;        // ~Blanco cálido (inverso de #282c34)
+    bg1: #e8e2da;        // ~Crema suave (inverso de #21252b)
+    bg2: #dbd3c9;        // ~Beige claro (inverso de #2c313a)
+    bg3: #cec4b8;        // ~Gris cálido (inverso de #3e4451)
+    bg4: #c1b5a7;        // ~Marrón muy claro (inverso de #4b5263)
+    
+    /* Bordes y acentos (adaptados de los originales) */
+    bd: #9fb4c7;         // ~Azul grisáceo suave (inverso de #344955)
+    fg: #2d3a3f;         // ~Gris azulado oscuro (inverso de #abb2bf para contraste)
+    
+    /* Colores vibrantes (ajustados para fondo claro) */
+    red: #d6454a;        // ~Rojo fresa (más suave que #e06c75)
+    orange: #c98f5a;     // ~Caramelo claro (de #d19a66)
+    yellow: #d9a56a;     // ~Miel suave (de #e5c07b)
+    green: #7fa57c;      // ~Verde salvia (de #98c379)
+    blue: #4f8da8;       // ~Azul sereno (de #61afef)
+    purple: #b386b0;     // ~Lavanda suave (de #c678dd)
+    aqua: #5aa3a3;       // ~Turquesa calmado (de #56b6c2)
+    
+    /* Extremos */
+    black: #1a1f24;      // ~Casi negro (inverso de #000000)
+    white: #fdf8f2;      // ~Blanco hueso (inverso de #ffffff)
+    
+    /* Grises cálidos (inversos de los originales) */
+    grey0: #b5aaa0;      // ~Gris topo claro (inverso de #5c6370)
+    grey1: #8e847b;      // ~Gris piedra (inverso de #828997)
+    grey2: #675f57;      // ~Gris pizarra (inverso de #abb2bf)
+}
+

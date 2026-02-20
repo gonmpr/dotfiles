@@ -1,0 +1,69 @@
+@import "../colors.css";
+
+* {
+  all: unset;
+  font-size: 14px;
+  font-family: "GeistMono Nerd Font";
+}
+
+.floating-notifications > scrolledwindow,
+.control-center {
+  background-color: @bg0;
+  color: @fg;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.floating-notifications > scrolledwindow > widget > *:not(:last-child) {
+  border-bottom: 1px solid @bg2;
+}
+
+.notification .notification-content {
+  margin: 10px ;
+}
+
+.notification.low {
+  border-right: 4px solid @green;
+}
+
+.notification.normal {
+  border-right: 4px solid @orange;
+}
+
+.notification.critical {
+  border-right: 4px solid @red;
+}
+
+.notification-content .summary {
+  font-weight: bold;
+  font-size: 15px;
+  color: @fg;
+}
+
+.notification-content .body {
+  color: @fg;
+}
+
+.notification-content .time {
+  color: @fg;
+  margin-right: 30px;
+}
+
+.close-button {
+  margin: 8px;
+  padding: 2px;
+  border-radius: 6px;
+  background-color: @bg2;
+  color: @fg;
+}
+
+.close-button:hover {
+  background-color: @red;
+}
+
+.widget-title {
+    padding: 10px 10px;
+}
+
+.control-center-list-placeholder {
+    opacity: 0;
+}

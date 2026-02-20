@@ -1,30 +1,22 @@
-//ubicado en /home/gonmpr/.local/share/rofi/themes
+@import "../colors.rasi"
 
 *{
-    hv:#d19a66;
-    bg:#282c34;
-    txt:#abb2bf;
-    ug:#344955;
-
-    background-color: @bg;
-    dark: @bg;
+    background-color: @bg0;
     border: 0px;
 }
 
 window{
-
     width: 100;
     location: northwest;
-    anchor: northwest;
     y-offset: 5px;
     x-offset: 5px;
     anchor: center;
     spacing: 3px;
     children: [mainbox];
-    horientation: horizontal;
+    orientation: horizontal;
     border: 1px;
     border-radius: 8px;
-    border-color: @ug;
+    border-color: @bd;
 }
 
 mainbox{
@@ -35,9 +27,7 @@ message{
     padding: 5px;
 }
 
-
 entry, prompt, case-indicator{
-
     text-font: inherit;
     text-color: inherit;
 }
@@ -45,7 +35,6 @@ entry, prompt, case-indicator{
 prompt{
     enabled: false;
 }
-
 
 listview{
     dynamic: true;
@@ -55,7 +44,7 @@ listview{
 element{
     padding:3px;
     vertical-align: 0.5;
-    color: @txt;
+    color: @fg;
     font: inherit;
 }
 
@@ -64,22 +53,22 @@ element-text{
     text-color: inherit;
     horizontal-align: 0.5;
     vertical-align: 0.5;
-    
 }
 
 element selected.normal{
-    background-color: @hv;
-    color: @bg;
+    background-color: @orange;
+    color: @bg0;
 }
 
 element normal active{
-    background-color: @hv;
+    background-color: @orange;
 }
+
 element normal urgent{
-    background-color: @txt;
+    background-color: @fg;
 }
 
 element selected active{
-    background: @hv;
-    forground: @bg;
+    background: @orange;
+    foreground: @bg0;
 }

@@ -1,30 +1,24 @@
-*{
-    hv:#d19a66;
-    bg:#282c34;
-    txt:#abb2bf;
-    ug:#344955;
+@import "../colors.rasi"
 
-    background-color: @bg;
-    dark: @bg;
+*{
+    background-color: @bg0;
+    dark: @bg0;
     border: 0px;
 
-    font: "JetBrainsMono Nerd Font";
-
+    font: "GeistMono Nerd Font";
 }
 
 window{
-
-
     width: 400;
     y-offset: 5;
     location: north;
     anchor: north;
     spacing: 0;
     children: [mainbox];
-    horientation: horizontal;
+    orientation: horizontal;
     border: 1px;
     border-radius: 1px;
-    border-color: @ug;
+    border-color: @bd;
 }
 
 mainbox{
@@ -40,12 +34,10 @@ inputbar{
     padding: 3px;
     margin: 3px;
     border: 0px 0px 0px 0px;
-    border-color: @ug;
-
+    border-color: @bd;
 }
 
 entry, prompt, case-indicator{
-
     text-font: inherit;
     text-color: inherit;
 }
@@ -53,7 +45,6 @@ entry, prompt, case-indicator{
 prompt{
     enabled: false;
 }
-
 
 listview{
     dynamic: true;   
@@ -65,30 +56,30 @@ listview{
 element{
     padding:3px;
     vertical-align: 0.5;
-    color: @txt;
+    color: @fg;
     font: inherit;
 }
 
 element-text{
     background-color: inherit;
     text-color: inherit;
-    
 }
 
 element selected.normal{
-    background-color: @hv;
-    color: @bg;
+    background-color: @orange;
+    color: @bg0;
 }
 
 element normal active{
-    background-color: @hv;
+    background-color: @orange;
 }
+
 element normal urgent{
-    background-color: @txt;
+    background-color: @fg;
 }
 
 element selected active{
-    background: @hv;
-    forground: @bg;
+    background: @orange;
+    foreground: @bg0;
 }
 
