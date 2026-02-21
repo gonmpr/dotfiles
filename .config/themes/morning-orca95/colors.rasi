@@ -1,0 +1,30 @@
+* {
+    /* Fondos - MÁS OSCUROS, MÁS COLOR */
+    bg0: #b7cdc2;  // Verde mar medio - base con presencia
+    bg1: #acc2b8;  // Aguamarina medio - más color que claro
+    bg2: #a1b8ae;  // Azul verdoso medio - con personalidad
+    bg3: #96aea5;  // Gris azulado medio - elegante
+    bg4: #8ba49c;  // Azul piedra medio - profundo
+    
+    /* Texto y bordes - contraste fuerte */
+    fg: #0a2a38;   // Azul noche casi negro (más contraste)
+    bd: #3f6f85;   // Azul más oscuro para bordes
+    
+    /* Acentos - mantienen su fuerza */
+    red: #c96f6f;     // Coral
+    orange: #d48d6a;  // Naranja
+    yellow: #dba57a;  // Durazno
+    green: #5a8a80;   // Verde mar más oscuro
+    blue: #4585a0;    // Azul más profundo
+    purple: #8f74a0;  // Lila más intenso
+    aqua: #4e9890;    // Turquesa más profundo
+    
+    /* Extremos */
+    black: #0a1f2a;   // Azul muy oscuro
+    white: #e0f0e8;   // Blanco roto azulado
+    
+    /* Grises con tono */
+    grey0: #8a9e98;   // Gris verdoso
+    grey1: #7a8e88;   // Gris azulado
+    grey2: #6a7e78;   // Gris profundo
+}

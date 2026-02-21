@@ -30,7 +30,7 @@ message{
 }
 
 inputbar{
-    color: #fff;
+    color: @fg;
     padding: 3px;
     margin: 3px;
     border: 0px 0px 0px 0px;
@@ -66,12 +66,12 @@ element-text{
 }
 
 element selected.normal{
-    background-color: @orange;
+    background-color: @red;
     color: @bg0;
 }
 
 element normal active{
-    background-color: @orange;
+    background-color: @red;
 }
 
 element normal urgent{
@@ -79,7 +79,7 @@ element normal urgent{
 }
 
 element selected active{
-    background: @orange;
+    background: @red;
     foreground: @bg0;
 }
 

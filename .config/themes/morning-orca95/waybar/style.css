@@ -1,0 +1,116 @@
+@import '../colors.css';
+
+* {
+  font-family: "Adwaita Sans", "GeistMono Nerd Font Propo", sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: @bg1;
+  border: none;
+  border-bottom: 2px solid @black;
+  box-shadow: inset 2px 2px 3px @grey1;
+
+}
+
+tooltip {
+  background: @black;
+  border: 1px solid @black;
+  border-radius: 0;
+}
+
+tooltip label {
+  color: @white;
+  padding: 8px 12px;
+}
+
+#workspaces {
+  padding: 3px 5px;
+  margin: 3px 0 0px 20px;
+  color: @fg;
+  background: @grey1;
+  border: 2px solid @black;
+
+}
+
+#workspaces button {
+  padding: 2px 0px;
+  margin: 2px 3px;
+  color: @fg;
+  background-color: @bg2;
+  border-width: 1px 3px 3px 1px;
+  border-color: @black;
+  border-radius: 0;
+  min-width: 22px;
+  min-height: 18px;
+  transition: none;
+
+}
+
+
+#workspaces button:hover {
+  background: @bg4;
+  color: @fg;
+  border-width: 1px 1px 1px 1px;
+  border-color: @black;
+  box-shadow: inherit; 
+  text-shadow: inherit;
+}
+
+#workspaces button.active {
+  background-color: @grey1;
+  color: @black;
+  border-width: 1px 1px 1px 1px;
+  border-color: @black;
+
+}
+
+#workspaces button.urgent {
+  background-color: @black;
+  color: @white;
+  border-color: @black;
+}
+
+
+#pulseaudio,
+#network,
+#bluetooth,
+#custom-power {
+  background-color: @bg0;
+  color: @fg;
+  padding: 2px 10px;
+  margin: 4px 0px 4px 10px;
+  border-style: solid;
+  border-color: @black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 0;
+
+}
+
+#battery,
+#temperature,
+#clock,
+#tray{
+  background-color: @bg3;
+  color: @fg;
+  padding: 2px 8px;
+  margin: 4px 0px 0px 10px;
+  border: 2px solid @black;
+  border-radius: 0;
+}
+
+#custom-power {
+  margin: 3px 10px 3px 10px;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#custom-power:hover{
+  background-color: @bg4;
+  color: @fg;
+  border-width: 1px 1px 1px 1px;
+  border-color: @black;
+}

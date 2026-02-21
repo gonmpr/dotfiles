@@ -6,7 +6,7 @@
 }
 
 window{
-    width: 200;
+    width: 140;
     location: northwest;
     y-offset: 5px;
     x-offset: 5px;
@@ -56,12 +56,12 @@ element-text{
 }
 
 element selected.normal{
-    background-color: @red;
+    background-color: @orange;
     color: @bg0;
 }
 
 element normal active{
-    background-color: @red;
+    background-color: @orange;
 }
 
 element normal urgent{
@@ -69,6 +69,6 @@ element normal urgent{
 }
 
 element selected active{
-    background: @red;
+    background: @orange;
     foreground: @bg0;
 }

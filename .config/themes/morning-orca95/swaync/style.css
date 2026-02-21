@@ -10,7 +10,7 @@
 .control-center {
   background-color: @bg0;
   color: @fg;
-  border-radius: 0 0 0 12px;
+  border-radius: 12px 0;
 }
 
 .floating-notifications > scrolledwindow > widget > *:not(:last-child) {
