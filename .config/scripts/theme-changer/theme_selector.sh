@@ -31,6 +31,6 @@ if [ -n "$selected_theme" ]; then
     theme=$(echo "$selected_theme" | sed -e 's/^[● ]*//' -e 's/[[:space:]]*$//')
     
     # change the theme with the sh
-    ~/.config/scripts/ch_theme.sh "$theme"
+    ~/.config/scripts/theme-changer/ch_theme.sh "$theme"
     
 fi

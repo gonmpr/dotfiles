@@ -2,12 +2,12 @@
   "position": "top",
   "margin-top": 0,
   "modules-left": ["clock", "hyprland/workspaces"],
-  "modules-center": ["tray"],
   "modules-right": [
-    "temperature",
+    "tray",
     "pulseaudio",
     "network",
     "bluetooth",
+    "temperature",
     "battery",
     "custom/power"
   ],
@@ -85,31 +85,9 @@
       "on-update": "bash -c 'lvl=$(cat /sys/class/power_supply/BAT0/capacity); flag=/tmp/waybar_battery_warn; if [ \"$lvl\" -le 15 ]; then if [ ! -f $flag ]; then notify-send \"Batería baja\" \"Nivel: ${lvl}%\"; touch $flag; fi; else rm -f $flag; fi'"
   },
 
-  "custom/notification": {
-    "tooltip": true,
-    "format": "<span size='16pt'>{icon}</span>",
-    "format-icons": {
-      "notification": "󱅫",
-      "none": "󰂜",
-      "dnd-notification": "󰂠",
-      "dnd-none": "󰪓",
-      "inhibited-notification": "󰂛",
-      "inhibited-none": "󰪑",
-      "dnd-inhibited-notification": "󰂛",
-      "dnd-inhibited-none": "󰪑"
-    },
-    
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-
   "custom/power": {
       "format": "⏻",
-      "on-click": "~/.config/rofi/scripts/power.sh",
+      "on-click": "~/.config/scripts/power.sh",
       "tooltip": false
   }
 

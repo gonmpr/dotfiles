@@ -7,10 +7,10 @@
 
 window{
     width: 200;
-    location: northwest;
+    location: north;
     y-offset: 5px;
     x-offset: 5px;
-    anchor: center;
+    anchor: north;
     spacing: 3px;
     children: [mainbox];
     orientation: horizontal;

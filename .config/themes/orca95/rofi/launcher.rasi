@@ -1,0 +1,99 @@
+@import "../colors.rasi"
+
+window {
+    width: 300;
+    y-offset: -2;
+    location: northwest;
+    anchor: northwest;
+
+    children: [mainbox];
+
+    background-color: @bg4;
+
+    border: 2px;                  /* más grueso = más retro */
+    border-color: @black;
+
+    padding: 6px;                  /* espacio para efecto doble marco */
+
+    layer: "overlay";
+}
+
+
+mainbox {
+    children: [listview, inputbar];
+    spacing: 6;
+    padding: 6px;
+
+    background-color: @bg4;
+
+    border: 2px;
+    border-color: @grey2;
+}
+
+prompt {
+    enabled: false;
+}
+
+inputbar {
+    background-color: @grey1;
+    padding: 2px;
+    border: 2px;
+    margin: 2px 16px 2px -1px;
+}
+
+entry {
+    background-color: @bg0;
+    padding: 6px;
+    text-color: @fg;
+    border: 0px;
+}
+
+case-indicator {
+    enabled: false;
+}
+
+listview {
+    lines: 8;
+    background-color: @bg4;
+
+    padding: 4px 0px;
+    spacing: 4px;
+
+    scrollbar: true;
+    reverse: true;
+}
+
+element {
+    padding: 6px 8px;
+    margin: 0px 2px;
+
+    vertical-align: 0.5;
+
+    background-color: @bg1;
+    text-color: @fg;
+
+    border: 2px;      
+    border-color: @black;
+}
+
+
+element selected.normal {
+    background-color: @green;  
+    border: 2px;
+    border-color: @bg4;
+}
+
+element-text {
+    background-color: inherit;
+}
+
+scrollbar {
+    width: 8px;
+    background-color: @bg4;
+
+    border: 2px;
+    border-color: @grey2;
+
+    handle-color: @grey2;
+    handle-width: 10px;
+}
