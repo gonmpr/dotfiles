@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CURRENT_THEME=$(cat "$HOME/.cache/current_theme" 2>/dev/null || echo "moki")
-BASE_DIR="$HOME/.config/themes"
+#!/bin/bash
+
 WALLPAPER_DIR="$HOME/Imágenes/Wallpapers"
 CURRENT_WALLPAPER=$(cat "$HOME/.cache/current_wallpaper" 2>/dev/null || echo "")
 
@@ -21,7 +21,7 @@ done
 
 # select wallpaper
 selection=$(printf '%s\n' "${inputs[@]}" \
-    | rofi -theme "$BASE_DIR/$CURRENT_THEME/rofi/wallset.rasi" \
+    | rofi -theme "$HOME/.config/rofi/wallset.rasi" \
            -dmenu \
            -p "Wallpapers")
 
