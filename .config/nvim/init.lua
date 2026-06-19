@@ -1,4 +1,6 @@
 vim.cmd.colorscheme("habamax")
+require("config.colors.habamax").setup()
+
 
 -- Basics
 require("config.core.settings")
