@@ -13,9 +13,7 @@ requires NVIM 0.11+
 - `<Tab>` → next buffer
 - `<S-Tab>` → previous buffer
 
-some buffers are ephemerals, they autoclose when you leave them,
-ephemeral buffers only can be leave using `<S-Tab>` or `<Tab>`,
-except the floating bufers, which can be leave only using `<S-Tab>`
+
 
 ## File explorer
 - `<leader>e` → open explorer in new buffer (ephemeral) 
@@ -26,11 +24,6 @@ except the floating bufers, which can be leave only using `<S-Tab>`
 ## Terminal
 - `<leader>t` → open ephemeral floating terminal  
   (buffer is wiped on close, always starts in insert mode)
-
-## Code navigation
-- `]d` → go to definition  
-- `[d` → go back  
-  (custom implementation, no LSP)
 
 ## Editing behavior
 
