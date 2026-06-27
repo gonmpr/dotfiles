@@ -13,9 +13,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 vim.keymap.set("v", "r", "\"hy:%s/<C-r>h//g<left><left>")			
 
 -- Move current line down 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv") 
+vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv")
 -- Move current line up 
-vim.keymap.set("v", "K", ":m '<-2<CR>gv")
+vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv")
 
 -- Better indenting in visual mode
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
