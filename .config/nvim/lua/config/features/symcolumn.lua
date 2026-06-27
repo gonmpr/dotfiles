@@ -32,8 +32,6 @@ vim.api.nvim_create_autocmd(
   {
     "BufEnter",
     "WinScrolled",
-    "CursorMoved",
-    "CursorMovedI",
     "TextChanged",
     "TextChangedI",
     "VimResized",
