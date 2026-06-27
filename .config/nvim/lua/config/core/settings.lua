@@ -29,6 +29,8 @@ vim.opt.conceallevel = 0                           -- Don't hide markup
 vim.opt.concealcursor = ""                         -- Don't hide cursor line markup 
 vim.opt.lazyredraw = true                          -- Don't redraw during macros
 vim.opt.synmaxcol = 300                            -- Syntax highlighting limit
+vim.cmd("syntax enable")
+vim.cmd("filetype plugin indent on")
 
 -- Explorer
 vim.g.netrw_banner = 0
