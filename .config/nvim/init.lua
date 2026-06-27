@@ -8,7 +8,7 @@ require("config.features.autocomplete")
 require("config.features.statusbar")
 require("config.features.symcolumn")
 
--- require instalation
+-- External / optional features
 require("config.features.cursor")
 require("config.features.finder")
 
