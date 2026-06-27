@@ -9,7 +9,7 @@ require("config.features.statusbar")
 require("config.features.symcolumn")
 
 -- External / optional features
-require("config.features.cursor")
 require("config.features.finder")
+-- require("config.features.cursor")
 
 
