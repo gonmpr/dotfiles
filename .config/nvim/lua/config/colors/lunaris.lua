@@ -252,6 +252,17 @@ function M.setup()
 
   link("Folded", "Comment")
   link("FoldColumn", "LineNr")
+
+
+  -- =========================
+  -- Code Macros
+  -- =========================
+  
+  hl("ProfilerMacro", {
+      fg = color.red,
+      bold = true,
+  })
+
 end
 
 return M
