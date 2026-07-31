@@ -1,0 +1,2 @@
+syntax keyword ProfilerMacro PROFILE_BLOCK PROFILE_START PROFILE_END PROFILE_DUMP
+highlight link ProfilerMacro Macro
